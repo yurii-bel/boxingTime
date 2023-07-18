@@ -8,6 +8,7 @@ import { ThemeProvider } from "@material-tailwind/react";
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+const redirectUri = process.env.REACT_APP_BASE_URL;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,7 +16,7 @@ root.render(
     <Auth0Provider
       domain={domain}
       clientId={clientId}
-      redirectUri={window.location.origin}
+      redirectUri={redirectUri}
     >
       <ThemeProvider>
         <App />
