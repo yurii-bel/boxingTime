@@ -16,7 +16,7 @@ root.render(
     <Auth0Provider
       domain={domain}
       clientId={clientId}
-      redirectUri={redirectUri}
+      redirectUri={window.location.origin}
     >
       <ThemeProvider>
         <App />
